@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:networking_basic/dota_hero_json_page.dart';
 import 'package:networking_basic/parse_json_page.dart';
 import 'package:networking_basic/photo_json_page.dart';
 
@@ -33,6 +34,15 @@ class _HomePageState extends State<HomePage> {
               }));
             },
             child: Text("Photo Json Parsing"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return DotaHeroJsonPage();
+              }));
+            },
+            child: Text("Dota Heros Json Parsing"),
           )
         ],
       ),
